@@ -1,8 +1,13 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 export default function NavBar() {
+  const router = useRouter();
+  console.log(router);
   return (
     <nav>
-      <a href="/"></a>
-      <a href="/about"></a>
+      <Link href="/">Home</Link>
+      <Link href="/about">about</Link>
     </nav>
   );
 }
